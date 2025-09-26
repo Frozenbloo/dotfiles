@@ -45,6 +45,8 @@ sketchybar --default "${default[@]}"
 source $ITEM_DIR/spaces.sh
 source $ITEM_DIR/front_app.sh
 
+# -- Middle2
+
 # -- Right Side
 source $ITEM_DIR/calendar.sh
 source $ITEM_DIR/volume.sh
@@ -56,3 +58,6 @@ sketchybar --update
 
 # Initialize aerospace spaces
 $PLUGIN_DIR/aerospace_init.sh
+
+# Start aerospace workspace monitoring daemon
+CONFIG_DIR="$CONFIG_DIR" $PLUGIN_DIR/aerospace_daemon_manager.sh start
